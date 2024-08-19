@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://cdcs.ed.ac.uk/postcard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:postcard="http://cdcs.ed.ac.uk/postcard">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="postcard:postcard"/>
+      </xs:sequence>
+      <xs:attribute ref="xsi:schemaLocation" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postcard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="postcard:content"/>
+        <xs:element ref="postcard:address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="content" type="xs:string"/>
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="postcard:name"/>
+        <xs:element ref="postcard:co"/>
+        <xs:element ref="postcard:street"/>
+        <xs:element ref="postcard:town"/>
+        <xs:element ref="postcard:county"/>
+        <xs:element ref="postcard:postcode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="co" type="xs:string"/>
+  <xs:element name="street" type="xs:string"/>
+  <xs:element name="town" type="xs:string"/>
+  <xs:element name="county" type="xs:NCName"/>
+  <xs:element name="postcode" type="xs:string"/>
+</xs:schema>
