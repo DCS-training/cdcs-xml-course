@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Using the older DTD definition to provide entities for the document.
+    In this case the nbsp entity (non-breaking space).
+-->
+<!DOCTYPE entities [
+    <!ENTITY nbsp "&#160;">
+    <!ENTITY amp "&#39;">
+    <!ENTITY copy "&#169;">
+]>
+<!-- declarative markup, in this case using the root element of xhtml i.e. html -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/1999/xhtml https://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
+    <head>
+        <title>Example of xHTML using the xHTML schema</title>
+    </head>
+    <body>
+        <div class="header"/>
+        <div class="content">
+            <h1>Example of Declarative Markup</h1>
+            <p>
+                This is an example of using a controlled vocabulary to create a datafile of a particular&nbsp;<b>
+                type</b>.
+            </p>
+            <p>
+                In this case the schema used is the version 1.1 xHTML schema which is broadly analagous to HTML 4.0. 
+                There are some notable differences between xHTML and HTML. 
+                And although HTML (a form of SGML) is still by far more widespread, xHTML
+                is still used quite widely. The <b>EPUB standard</b>, for example, is a modified form of xHTML.
+            </p>
+            <p>
+                There are plans at the W3C to align xHTML with HTML5 (xHTML 2.0).
+            </p>
+        </div>
+        <div class="footer">
+            <hr/>
+            <p>&copy; University of Edinburgh (2024)</p>
+        </div>
+    </body>
+</html>

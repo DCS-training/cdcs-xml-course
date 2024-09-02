@@ -5,12 +5,13 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     exclude-result-prefixes="xs math xd"
     version="3.0">
-    <xsl:output encoding="utf-8" method="html" omit-xml-declaration="no"/>
+
+    <xsl:output encoding="utf-8" method="html" omit-xml-declaration="yes"/>
     
     <xsl:template match="/">
         <xsl:apply-templates/>
     </xsl:template>
-
+    
     <xsl:template match="root">
         <html>
             <head>
@@ -24,8 +25,8 @@
     
     <xsl:template match="postcard">
         <hr/>
-            <h1>Postcard</h1>
-            <xsl:apply-templates/>
+        <h1>Postcard</h1>
+        <xsl:apply-templates/>
         <hr/>
     </xsl:template>
     
@@ -37,7 +38,7 @@
             </p>
         </div>
     </xsl:template>
-    
+
     <xsl:template match="address">
         <div class="address">
             <h2>Name and Address</h2>
@@ -49,10 +50,9 @@
     
     <xsl:template match="name | co | street | town | county | country | postcode">
         <li>
-            <b><xsl:value-of select="local-name(.)"/></b>&#160;<xsl:value-of select="."/>
+            <b><xsl:value-of select="local-name(.)"/></b>&#160;<xsl:value-of select="string-join(string-to-codepoints(.),',')"/>
         </li>
     </xsl:template>
-    
     
     
 </xsl:stylesheet>
