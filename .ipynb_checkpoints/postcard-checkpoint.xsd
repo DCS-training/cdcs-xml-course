@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="postcard"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postcard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="content"/>
+        <xs:element ref="address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="content" type="xs:string"/>
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element minOccurs="0" ref="co"/>
+        <xs:element ref="street"/>
+        <xs:element ref="town"/>
+        <xs:element ref="county"/>
+        <xs:element ref="country"/>
+        <xs:element minOccurs="0" ref="postcode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="co" type="xs:string"/>
+  <xs:element name="street" type="xs:string"/>
+  <xs:element name="town" type="xs:string"/>
+  <xs:element name="county" type="xs:NCName"/>
+  <xs:element name="country" type="xs:string"/>
+  <xs:element name="postcode" type="xs:string"/>
+</xs:schema>

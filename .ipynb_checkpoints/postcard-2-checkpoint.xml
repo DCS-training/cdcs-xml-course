@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--- root element **REQUIRED** -->
+<root>
+    <postcard>
+        <!-- postcard text -->
+        <content>I love marmalade!</content>
+        <!-- address details -->
+        <address>
+            <name>Paddington Bear</name>
+            <co>Mrs Brown</co>
+            <street>32 Windsor Gardens</street>
+            <town>Notting Hill</town>
+            <county>London</county>
+            <country>United Kingdom</country>
+            <postcode>W9 3RG</postcode>
+        </address>
+    </postcard>
+    <postcard>
+        <!-- postcard text -->
+        <content>We love our rubbish as well</content>
+        <!-- address details -->
+        <address>
+            <name>Uncle Bulgaria</name>
+            <street>The Burrow</street>
+            <town>Wimbledon Common</town>
+            <county>London</county>
+            <country>United Kingdom</country>
+        </address>
+    </postcard>
+</root>
