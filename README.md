@@ -26,7 +26,15 @@ Under 'Standard Notebook (Python 3)' click 'Start'
 ### Download the files to Noteable.
 
 From the Noteable home page, click on the '+GitRepo' button at the top right of the screen.
-In the 'Git Repository URL' field copy the link to this GitHub repository, [https://github.com/DCS-training/cdcs-xml-course](https://github.com/DCS-training/cdcs-xml-course). 
+In the 'Git Repository URL' field, copy the link to this GitHub repository, [https://github.com/DCS-training/cdcs-xml-course](https://github.com/DCS-training/cdcs-xml-course). 
 Ignore all other fields.
 
 Once filled in, click the 'clone' button. After a few moments, you will then see a new folder appear with the files.
+
+
+# Author
+Ed MacKenzie
+
+# Copyright
+
+This repository has a [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/) license
